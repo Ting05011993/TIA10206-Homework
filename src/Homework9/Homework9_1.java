@@ -32,14 +32,11 @@ public class Homework9_1 implements Runnable {
 		Thread t2 = new Thread(r2);
 		t1.start();
 		t2.start();
-//		try {
-//			t1.join();
-//			t2.join();
-//		} catch (InterruptedException e) {
-//		}
-		if(t1.isAlive() == false && t2.isAlive() == false) {
-			System.out.println("完賽囉!!!!");
+		try {
+			t1.join();
+			t2.join();
+		} catch (InterruptedException e) {
 		}
-		
+		System.out.println("完賽囉!!!!");
 	}
 }
